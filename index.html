@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form style="background-color:pink;width:20%;align-items:center;text-align:center;border-radius:30%;margin-top:140px;padding:10px" action="">
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" placeholder="Enter your name"  required><br>
+        <label for="college">College: </label><br>
+        <input type="text" id="college" placeholder="Enter your College name" required> <br>
+        <label for="name">Ph no: </label><br>
+        <input type="text" id="phno" placeholder="Enter Phone Number" required><br>
+        <label for="name">Email: </label><br>
+        <input type="email" name="" id="mail" placeholder="Enter Mail Id" required><br>
+        <input style="border-radius:20px;padding:5px;margin:10px" type="submit" value="Submit">
+
+    </form>
+
+   
+
+
+
+
+    <script>
+        let Name=document.getElementById("name")
+        Name.style.padding="2px"
+        Name.style.margin="5px"
+
+        let College=document.getElementById("college")
+        College.style.padding="2px"
+        College.style.margin="5px"
+
+        let Phone=document.getElementById("phno")
+        Phone.style.padding="2px"
+        Phone.style.margin="5px"
+
+        let Email=document.getElementById("mail")
+        Email.style.padding="2px"
+        Email.style.margin="5px"
+
+
+
+
+        let form=document.getElementsByTagName("form")
+
+  
+    form[0].addEventListener("submit",(e)=>{
+        e.preventDefault()
+
+        let div1 = document.createElement("div");
+        div1.style.border="1px solid black"
+        div1.style.marginTop=""
+        div1.style.width='35vh'
+        div1.style.height="50vh"
+        div1.style.textAlign="center";
+        div1.style.marginLeft="40%";
+        div1.style.marginBottom="0%";
+        div1.style.borderRadius="10%";
+        div1.style.backgroundColor="lightgray"
+
+
+
+        let head=document.createElement("h1")
+        head.innerHTML="10000 Coders"
+        head.style.alignContent="center"
+        head.style.fontSize="20px"
+       
+
+        let Image=document.createElement("img")
+        Image.src="https://as1.ftcdn.net/v2/jpg/09/61/83/06/1000_F_961830636_2lFnzrdEzTkWdgQHJodOMBfQThLy9j2c.jpg"
+        Image.style.height="120px"
+        Image.style.width="120px"
+        Image.style.border="2px solid black"
+        Image.style.borderRadius="30px"
+
+        let nameP = document.createElement("p");
+        nameP.innerHTML = `Name: ${Name.value}`;
+        nameP.style.color = "black";
+        
+
+
+
+        let collegeP = document.createElement("p");
+        collegeP.innerHTML = `College: ${College.value}`;
+        collegeP.style.color = "black";
+      
+
+
+
+        let phoneP = document.createElement("p");
+        phoneP.innerHTML = `Ph no: ${Phone.value}`;
+        phoneP.style.color = "black";
+        
+
+
+
+        let emailP = document.createElement("p");
+        emailP.innerHTML = `Email id: ${Email.value}`;
+        emailP.style.color = "black";
+       
+
+
+        div1.appendChild(head);
+        div1.appendChild(Image);
+        div1.appendChild(nameP);
+        div1.appendChild(collegeP);
+        div1.appendChild(phoneP);
+        div1.appendChild(emailP);
+       
+
+
+        document.body.appendChild(div1)
+    })
+    
+   
+
+
+    </script>
+</body>
+</html>
